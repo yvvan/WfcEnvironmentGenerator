@@ -77,13 +77,6 @@ Setting up your new Blueprint
 12. To generate the same level again - paste your saved seed into "Seed" property and press "Generate in Editor".
 13. If you want to see interactive generation you have to set "Generate in Play Mode" and press play button.
 
-Content
--------------
-
-Number of Blueprints: 1
-Number of C++ Classes: 3 UCLASS, 2 UENUM, 1 USTRUCT, 20 plain C++ classes/structs
-Network Replicated: Yes
-
 Contact
 -------------
 If you have any Questions, Comments, Bug reports or feature requests for this plugin, or you wish to contact me you can and should email me - yv.ivan@gmail.com
