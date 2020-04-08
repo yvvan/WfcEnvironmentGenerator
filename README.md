@@ -3,6 +3,21 @@ Procedural Environment Generator (WFC) is based on WaveFunctionCollapse algorith
 In the plugin description you can see the screenshots made after putting WfcActorWithBlueprint (Content/Demo) into the scene and pressing button "Generate in Editor" in the WfcActorWithBlueprint details panel.
 For the demo content it's not recommended to change "Ground", "Floor Border", "Air Border" and "Voxel Size" values.
 
+Version 4.0 Changes
+-------------
+ - optimizations for large generated areas:
+   a) faster generation
+   b) faster rendering (with IstancedStaticMesh-es)
+   b) better 'undo' for almost infinite loops
+ - generation in background, cancelling, progress log:
+   a) "Clean generated" cancels unfinished generation in editor
+   b) "Clear All" blueprint function cancels generation in play mode (letter 'C' in example blueprint)
+   c) progress is now shown in the "Output Log" tab of UE
+
+Version 3.0 Changes
+-------------
+ - over 20 times faster generation
+
 Version 2.0 Changes
 -------------
  - added "Generate Meshes" and "Generate Meshes Async" blueprint functions. They enable the possibility to run generator at any time
@@ -17,6 +32,7 @@ How to use this Plugin
 -------------
 
 Check out the video tutorial about the basics: https://www.youtube.com/watch?v=0t3A4YZM6ks
+Advanced tools: https://www.youtube.com/watch?v=H1ToQn2GHR0
 
 Demo
 -------------
