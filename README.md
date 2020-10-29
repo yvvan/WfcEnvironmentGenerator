@@ -1,7 +1,6 @@
 Procedural Environment Generator (WFC) is based on WaveFunctionCollapse algorithm and allows to generate environments of the user-specified dimensions built from the prepared modules with connection rules.
 
 In the plugin description you can see the screenshots made after putting WfcActorWithBlueprint (Content/Demo) into the scene and pressing button "Generate in Editor" in the WfcActorWithBlueprint details panel.
-For the demo content it's not recommended to change "Ground", "Floor Border", "Air Border" and "Voxel Size" values.
 
 Version 6.0
  - Added symmetric constraints for X and Y axes, they work also in growing environment mode
