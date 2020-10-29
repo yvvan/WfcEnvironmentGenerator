@@ -3,8 +3,47 @@ Procedural Environment Generator (WFC) is based on WaveFunctionCollapse algorith
 In the plugin description you can see the screenshots made after putting WfcActorWithBlueprint (Content/Demo) into the scene and pressing button "Generate in Editor" in the WfcActorWithBlueprint details panel.
 For the demo content it's not recommended to change "Ground", "Floor Border", "Air Border" and "Voxel Size" values.
 
+Version 6.0
+ - Added symmetric constraints for X and Y axes, they work also in growing environment mode
+ - "Grows By" parameter is removed. Instead you can use the "Grows" flag which now indicates that the X and Y sizes
+   are maintained around the position of grow. So your X and Y work now as if you have "Grows By" set to X/2 and Y/2
+ - "Ground", "Air Border" and "Floor Border" fields are deprecated. They are replaced by more advanced
+   "Fixed Components" constraint which allows to set any kind of border. In the demo content the same borders are
+   recreated using "Fixed Components".
+
+Version 5.3
+ - Allow to map custom external actors to WfcComponents via "Map Meshes to Actors" blueprint function (example in WfcUnlimited)
+ - Introduce "Starting Point" parameter to start generation around specific position (example in WfcUnlimited)
+ - Introduce "Walkable Paths" together with "IsWalkable" properlies for X/Y/Z in WfcComponents. These are the constraints
+   that are checked during the generation. They automatically check that the specified paths are all fully walkable and restart
+   the generation until the proper level is generated (more advanced implementation will come later). Limited to non-growing environments.
+
+Version 5.2 Changes
+ Fixed bug with wholes in unlimited map when you go in Y direction.
+
+Version 5.1 Changes
+ Checkbox "Clean Up After Grow" added. It allows to remove older parts of the unlimited map after
+ it has grown by clicking on the Actor in editor or with "Increase from Point"/"Increase from Point Async"
+ blueprint function. It is now turned on in the example provided in WfcUnlimited blueprint (and in WfcLevel map).
+
+Version 5.0 Changes
+ - Unlimited environment is supported via step by step expansion.
+   Available via:
+    a) Clicking on existing actors in editor when "Grows By" parameter is > 0
+    b) Increase from Point blueprint function allows to start growing map from the specified Location
+   The example of both approaches is demonstrated in WfcUnlimited blueprint class
+
+Version 4.2 Changes
+ - new restriction settings are added:
+   a) fixed components: you can now set components names and their exact locations with rotation and they will be always put there
+   b) components maximum count: you can limit the maximum amount of certain components
+
+Version 4.1 Changes
+ - improved undo
+ - borders can now be set separately without failing generation
+ - seed is stable, fixed bug when the same seed led to different environment
+
 Version 4.0 Changes
--------------
  - optimizations for large generated areas:
    a) faster generation
    b) faster rendering (with IstancedStaticMesh-es)
@@ -15,7 +54,6 @@ Version 4.0 Changes
    c) progress is now shown in the "Output Log" tab of UE
 
 Version 3.0 Changes
--------------
  - over 20 times faster generation
 
 Version 2.0 Changes
@@ -32,7 +70,6 @@ How to use this Plugin
 -------------
 
 Check out the video tutorial about the basics: https://www.youtube.com/watch?v=0t3A4YZM6ks
-Advanced tools: https://www.youtube.com/watch?v=H1ToQn2GHR0
 
 Demo
 -------------
