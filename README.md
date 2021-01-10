@@ -2,6 +2,26 @@ Procedural Environment Generator (WFC) is based on WaveFunctionCollapse algorith
 
 In the plugin description you can see the screenshots made after putting WfcActorWithBlueprint (Content/Demo) into the scene and pressing button "Generate in Editor" in the WfcActorWithBlueprint details panel.
 
+Playlist with tutorials - https://www.youtube.com/playlist?list=PLsrW-AKNS-U5YTcoE5yfGFMcC4f5kdJGS
+
+Version 6.5
+ - Fix the ability to use plugin in Runtime, update Module type and introduce the separate module with editor-only functionality.
+
+Version 6.4
+ - Support Export and Import of WfcActor configurations via json files
+
+Version 6.3
+ - Auto Map Components to Actors checkbox maps WfcVoxel components and custom Blueprints which have the same name
+
+Version 6.2
+ - Fix the bug with actors placement
+ - Make possible to set different heights for different Z levels
+
+Version 6.1
+ - Enable the use of "AddInstancedStaticMesh" function in growing environments
+ - Make possible to map WfcVoxel-s to real actors directly in details panel
+ - Render mapped actors instead of static meshes in Blueprint preview
+
 Version 6.0
  - Added symmetric constraints for X and Y axes, they work also in growing environment mode
  - "Grows By" parameter is removed. Instead you can use the "Grows" flag which now indicates that the X and Y sizes
